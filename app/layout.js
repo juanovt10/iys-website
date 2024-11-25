@@ -1,6 +1,7 @@
 import { Montserrat, Roboto } from 'next/font/google';
 import "./globals.css";
 import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const montserrat = Montserrat({
   subsets: ['latin'], // Include the subset needed for your project
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className='flex flex-col'>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
