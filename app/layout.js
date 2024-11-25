@@ -1,16 +1,19 @@
-import localFont from "next/font/local";
+import { Montserrat, Roboto } from 'next/font/google';
 import "./globals.css";
+import NavBar from '@/components/NavBar';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const montserrat = Montserrat({
+  subsets: ['latin'], // Include the subset needed for your project
+  variable: '--font-montserrat', // Define a CSS variable
+  weight: ['400', '700'], // Define specific weights (normal and bold)
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  variable: '--font-roboto',
+  weight: ['400', '500'], // Add weights you use for body text
 });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -19,10 +22,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${montserrat.variable} ${roboto.variable}`}>
+      <body className='flex flex-col'>
+        <NavBar />
         {children}
       </body>
     </html>
