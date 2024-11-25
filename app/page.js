@@ -32,7 +32,7 @@ const page = () => {
 
 
   return (
-    <div className='space-y-20'>
+    <main className='space-y-20'>
       <Hero
         imageSrc={Hero1}
         title="Infraestrucutra y Senalizacion"
@@ -40,7 +40,7 @@ const page = () => {
       />
 
       {/* Services */}
-      <div className='font-semibold px-20 space-y-6'>
+      <div className='px-20 space-y-6'>
         <h1 className='text-3xl'>Our Services</h1>
         <div className='flex gap-4'>
           <ServiceCard
@@ -64,7 +64,7 @@ const page = () => {
       </div>
 
       {/* Projects */}
-      <div className='font-semibold px-20 space-y-6'>
+      <div className='px-20 space-y-6'>
         <div className='flex justify-between'>
           <h1 className='text-3xl'>Projects</h1>
           <Button>View All Projects</Button>
@@ -81,7 +81,7 @@ const page = () => {
           ))}
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

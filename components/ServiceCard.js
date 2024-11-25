@@ -3,7 +3,7 @@ import React from 'react'
 
 const ServiceCard = ({ Icon, title, description }) => {
   return (
-    <div className="rounded-lg shadow-md p-6 bg-white border border-gray-200">
+    <div className="card p-6">
       {/* Icon */}
       <div className="flex items-center justify-start mb-4">
         {Icon && <Icon className="h-8 w-8 text-primary" />}

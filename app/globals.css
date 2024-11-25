@@ -123,3 +123,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-gray-200 bg-gradient-to-br from-gray-100 to-white shadow-md
+  }
+}

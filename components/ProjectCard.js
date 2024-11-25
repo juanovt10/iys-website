@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ProjectCard = ({ imageSrc, title, description, tags }) => {
   return (
-    <div className="rounded-lg shadow-lg border border-gray-200 overflow-hidden bg-white">
+    <div className="card overflow-hidden">
       {/* Image */}
       <div className="relative w-full h-[300px]">
         <Image

@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail } from "lucide-react";
 
-
-
 const Footer = () => {
   const socials = [
     {
