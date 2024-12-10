@@ -23,33 +23,32 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-black text-white py-12 mt-20">
-      <div className="flex justify-between mx-20">
+    <footer className="bg-black text-white py-12">
+      <div className="flex flex-col md:flex-row justify-between px-6 md:px-20 space-y-8 md:space-y-0">
         {/* Section 1: Contact Info */}
         <div>
           <h3 className="text-xl font-bold mb-4">Office</h3>
           <p>Avenida 42 #28-47</p>
           <p>Villavicencio, Meta</p>
 
-          <div className="flex mt-4 space-x-1">
+          <div className="flex flex-wrap mt-4 space-x-2">
             {socials.map((social, index) => {
-              const Icon = social.icon; // Get the component reference
+              const Icon = social.icon;
               return (
                 <Link
                   key={index}
                   href={social.link}
                   className="border border-gray-600 rounded-lg p-2 hover:border-primary"
                 >
-                  <Icon className="h-6 w-6" /> {/* Render the dynamic icon */}
+                  <Icon className="h-6 w-6" />
                 </Link>
               );
             })}
           </div>
         </div>
 
-
         {/* Section 3: Services */}
-        <div>
+        <div className="hidden sm:block">
           <h3 className="text-xl font-bold mb-4">Our Services</h3>
           <ul className="space-y-2">
             <li><Link href="#" className="text-gray-400 hover:text-primary">Automation Solutions</Link></li>
@@ -75,9 +74,9 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="mt-12 border-t mx-20 border-gray-800 pt-6 text-center md:flex md:justify-between md:items-center text-gray-400">
+      <div className="mt-12 border-t mx-6 md:mx-20 border-gray-800 pt-6 text-center md:flex md:justify-between md:items-center text-gray-400">
         <p>&copy; 2024 Infraestructura y Senalizacion. All Rights Reserved.</p>
-        <div className="flex justify-center mt-4 md:mt-0 space-x-4">
+        <div className="flex flex-wrap justify-center mt-4 md:mt-0 space-x-4">
           <Link href="#" className="hover:text-primary">About Us</Link>
           <Link href="#" className="hover:text-primary">Projects</Link>
           <Link href="#" className="hover:text-primary">Contact Us</Link>

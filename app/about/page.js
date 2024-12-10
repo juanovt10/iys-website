@@ -25,7 +25,7 @@ const AboutUs = () => {
 
 
   return (
-    <main className='space-y-20'>
+    <main className='space-y-20 mb-20'>
       <Hero
         imageSrc={Hero2}
         title="Who is infraestructura y senalizacion"

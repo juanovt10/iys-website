@@ -6,7 +6,7 @@ import { PaintRoller, Construction, TrafficCone } from "lucide-react"; // Exampl
 
 const Services = () => {
   return (
-    <main className='space-y-20'>
+    <main className='space-y-20 mb-20'>
       <Hero
         imageSrc={Hero3}
         title="Our services"
@@ -18,17 +18,20 @@ const Services = () => {
           Icon={PaintRoller}
           title="Horizontal Signage"
           description="Lorem ipsum dolor sit amet consectetur. Purus et tortor enim eget tincidunt. Phasellus quam aliquam integer neque integer et amet vulputate tristique."
+          link="/services/horizontal-signage"
         />
         <ServiceCard
           Icon={Construction}
           title="Vertical Signage"
           description="Lorem ipsum dolor sit amet consectetur. Purus et tortor enim eget tincidunt. Phasellus quam aliquam integer neque integer et amet vulputate tristique."
+          link="/services/vertical-signage"
         />
 
         <ServiceCard
           Icon={TrafficCone}
           title="Devices"
           description="Lorem ipsum dolor sit amet consectetur. Purus et tortor enim eget tincidunt. Phasellus quam aliquam integer neque integer et amet vulputate tristique."
+          link="/services/devices"
         />
       </section>
     </main>

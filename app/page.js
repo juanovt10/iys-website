@@ -32,44 +32,46 @@ const page = () => {
 
 
   return (
-    <main className='space-y-20'>
+    <main className='space-y-20 mb-20'>
       <Hero
         imageSrc={Hero1}
         title="Infraestrucutra y Senalizacion"
         subtitle="Your new partner in blah blah blah"
       />
 
-      {/* Services */}
-      <div className='px-20 space-y-6'>
+      <div className='px-10 md:px-20 space-y-6'>
         <h1 className='text-3xl'>Our Services</h1>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 flex-col md:flex-row'>
           <ServiceCard
             Icon={PaintRoller}
             title="Horizontal Signage"
             description="Lorem ipsum dolor sit amet consectetur. Purus et tortor enim eget tincidunt. Phasellus quam aliquam integer neque integer et amet vulputate tristique."
+            link="/services/horizontal-signage"
           />
 
           <ServiceCard
             Icon={Construction}
             title="Vertical Signage"
             description="Lorem ipsum dolor sit amet consectetur. Purus et tortor enim eget tincidunt. Phasellus quam aliquam integer neque integer et amet vulputate tristique."
+            link="/services/vertical-signage"
           />
 
           <ServiceCard
             Icon={TrafficCone}
             title="Devices"
             description="Lorem ipsum dolor sit amet consectetur. Purus et tortor enim eget tincidunt. Phasellus quam aliquam integer neque integer et amet vulputate tristique."
+            link="/services/devices"
           />
         </div>
       </div>
 
       {/* Projects */}
-      <div className='px-20 space-y-6'>
+      <div className='px-10 md:px-20 space-y-6'>
         <div className='flex justify-between'>
           <h1 className='text-3xl'>Projects</h1>
           <Button>View All Projects</Button>
         </div>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 flex-col md:flex-row'>
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

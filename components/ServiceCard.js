@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const ServiceCard = ({ Icon, title, description }) => {
+const ServiceCard = ({ Icon, title, description, link }) => {
   return (
     <div className="card p-6">
       {/* Icon */}
@@ -17,7 +17,7 @@ const ServiceCard = ({ Icon, title, description }) => {
 
       {/* Explore Link */}
       <Link
-        href="#"
+        href={link}
         className="mt-4 inline-block text-primary font-medium hover:underline"
       >
         Explore
