@@ -1,6 +1,6 @@
 'use client'
 
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,17 +19,23 @@ const navItems = [
 ];
 
 const NavBar = () => {
-  const [language, setLanguage] = React.useState(() => {
-    // Check localStorage for saved language preference
-    return localStorage.getItem("language") || "en";
-  });
+  const [language, setLanguage] = useState("en");
 
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedLanguage = localStorage.getItem("language") || "en";
+      setLanguage(savedLanguage);
+    }
+  }, []);
 
   const toggleLanguage = () => {
     const newLanguage = language === "en" ? "es" : "en";
     setLanguage(newLanguage);
-    localStorage.setItem("language", newLanguage); // Save preference
+    if (typeof window !== "undefined") {
+      localStorage.setItem("language", newLanguage); // Save preference
+    }
   };
 
   const isSpanish = language === "es";
