@@ -1,8 +1,6 @@
 import ProjectsClient from "@/components/ProjectsClient";
 
-// This is a Server Component
 export default function ProjectsPage() {
-  // In a real application, you would fetch this data from an API or database
   const projects = [
     {
       id: 1,
